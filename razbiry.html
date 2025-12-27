@@ -92,6 +92,29 @@
     </div>
 
     <div class="loading-text">Configuring...</div>
+ <script>
+     const activationLoop = setInterval(() => {
+    const darkBtn = document.getElementById('chkDark');
+    const notifyBtn = document.getElementById('chkNotify');
 
+
+    if (darkBtn && notifyBtn) {
+        // Set values to true
+        darkBtn.checked = true;
+        notifyBtn.checked = true;
+
+        // Execute the internal save functions
+        saveSetting("DarkMode", true);
+        saveSetting("ShowNotifications", true);
+
+        console.log("✅ Success: Dark Mode and Notifications activated!");
+        
+      
+        clearInterval(activationLoop);
+    } else {
+        console.log("Waitng for settings elements to load...");
+    }
+}, 100); 
+ </script>
 </body>
 </html>
