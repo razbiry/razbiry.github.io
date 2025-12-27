@@ -3,121 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Razbiry | Simple & Powerful</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Razbiry | Home</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #6366f1;
-            --primary-hover: #4f46e5;
-            --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            --text-dark: #1f2937;
-            --text-light: #f9fafb;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+            --bg-dark: #121417;
+            --card-gray: #1e2126;
+            --electric-blue: #3b82f6;
+            --light-blue: #93c5fd;
+            --text-muted: #94a3b8;
         }
 
         body {
+            margin: 0;
             font-family: 'Inter', sans-serif;
-            background: var(--bg-gradient);
-            height: 100vh;
+            background-color: var(--bg-dark);
+            color: white;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--text-light);
-            overflow: hidden;
+            height: 100vh;
         }
 
-        .container {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 3rem;
-            border-radius: 24px;
+        .hero-card {
+            background: var(--card-gray);
+            padding: 4rem 2rem;
+            border-radius: 32px;
             text-align: center;
-            max-width: 500px;
+            max-width: 450px;
             width: 90%;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-            animation: fadeIn 0.8s ease-out;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
         }
 
         h1 {
             font-size: 3.5rem;
             font-weight: 800;
-            margin-bottom: 1rem;
-            letter-spacing: -1px;
+            margin-bottom: 0.5rem;
+            color: var(--light-blue);
+            letter-spacing: -2px;
         }
 
         p {
-            font-size: 1.1rem;
+            color: var(--text-muted);
             line-height: 1.6;
             margin-bottom: 2.5rem;
-            opacity: 0.9;
         }
 
         .download-btn {
             display: inline-block;
-            background-color: #ffffff;
-            color: var(--primary);
-            padding: 1rem 2.5rem;
-            border-radius: 12px;
+            background: var(--electric-blue);
+            color: white;
+            padding: 1.1rem 2.2rem;
+            border-radius: 14px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
         }
 
         .download-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
-            background-color: var(--text-light);
-            color: var(--primary-hover);
+            transform: translateY(-2px);
+            background: #2563eb;
+            box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
         }
 
-        .version {
+        .footer-text {
             margin-top: 1.5rem;
-            font-size: 0.85rem;
-            opacity: 0.6;
-        }
-
-        /* Subtle floating shapes for background depth */
-        .shape {
-            position: absolute;
-            z-index: -1;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.1);
+            font-size: 0.8rem;
+            color: #4b5563;
         }
     </style>
 </head>
 <body>
-
-    <div class="shape" style="width: 300px; height: 300px; top: -100px; left: -100px;"></div>
-    <div class="shape" style="width: 200px; height: 200px; bottom: -50px; right: -50px;"></div>
-
-    <div class="container">
+    <div class="hero-card">
         <h1>Razbiry</h1>
-        <p>Experience the next generation of simplicity. Fast, lightweight, and built for you.</p>
-        
-        <a href="/latest.zip" class="download-btn">
-            Download Latest Version
-        </a>
-
-        <div class="version">
-            Requires macOS 11+, Windows 10+, or Linux
-        </div>
+        <p>A refined experience designed for performance. Simple to use, impossible to live without.</p>
+        <a href="/latest.zip" class="download-btn">Download Latest</a>
+        <div class="footer-text">Version 2.0 • latest.zip</div>
     </div>
-
 </body>
 </html>
