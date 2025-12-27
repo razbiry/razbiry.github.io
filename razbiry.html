@@ -1,1 +1,97 @@
-Razbiry is loading... (v=true_)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Razbiry...</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            background-color: #121417;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: 'Inter', sans-serif;
+            overflow: hidden;
+        }
+
+        .logo-container {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .brand-name {
+            font-size: 2.5rem;
+            color: #93c5fd; /* Lighter Blue */
+            letter-spacing: -1px;
+            z-index: 2;
+        }
+
+        /* The Glow Effect */
+        .pulse {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 120%;
+            height: 120%;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.2) 0%, transparent 70%);
+            animation: pulse-animation 2s infinite ease-in-out;
+            z-index: -1;
+        }
+
+        .loader-bar {
+            width: 150px;
+            height: 4px;
+            background: #1e2126;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+
+        .loader-progress {
+            width: 40%;
+            height: 100%;
+            background: #3b82f6;
+            border-radius: 10px;
+            animation: slide 1.5s infinite ease-in-out;
+        }
+
+        @keyframes pulse-animation {
+            0% { transform: translate(-50%, -50%) scale(0.8); opacity: 0.5; }
+            50% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.8; }
+            100% { transform: translate(-50%, -50%) scale(0.8); opacity: 0.5; }
+        }
+
+        @keyframes slide {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(250%); }
+        }
+
+        .loading-text {
+            color: #4b5563;
+            font-size: 0.9rem;
+            margin-top: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="logo-container">
+        <div class="pulse"></div>
+        <div class="brand-name">Razbiry</div>
+    </div>
+
+    <div class="loader-bar">
+        <div class="loader-progress"></div>
+    </div>
+
+    <div class="loading-text">Configuring...</div>
+
+</body>
+</html>
